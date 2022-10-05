@@ -13,6 +13,14 @@ h1, h2, h3, h4, h5, h6, p {
   border: 1px solid red;
 }
 
+.section_space-around {
+  margin: 100px auto;
+}
+
+.centered-block {
+  margin: auto;
+}
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -101,10 +109,6 @@ h1, h2, h3, h4, h5, h6, p {
   justify-content: center;
 }
 
-.description_space-around {
-  margin: 100px auto;
-}
-
 .two-columns {
   width: 80%;
   display: flex;
@@ -144,6 +148,70 @@ h1, h2, h3, h4, h5, h6, p {
 
 }
 
+.section-title {
+  width: 60%;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.section-title_space-bottom {
+  margin-bottom: 20px;
+}
+
+.section-subtitle {
+  width: 60%;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.table {
+  width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 60px;
+}
+
+.table_space-top {
+  padding-top: 60px;
+}
+
+.table__cell {
+  width: 250px;
+}
+
+.table__heading {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.table__heading_space-bottom {
+  margin-bottom: 20px;
+}
+
+.table__text {
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.table__text_space-bottom {
+  margin-bottom: 20px;
+}
+
+/* и элемента с модификатором вида ключ-значение */
+.table__cell_theme_dark {
+  width: 200px;
+  color: white;
+  margin-right: 0;
+  margin-top: 80px;
+}
+
 .feynman {
 
 }
@@ -156,10 +224,4 @@ h1, h2, h3, h4, h5, h6, p {
 
 }
 
-/* и элемента с модификатором вида ключ-значение */
-.table__cell_theme_dark {
-  width: 200px;
-  color: white;
-  margin-right: 0;
-  margin-top: 80px;
-}
+
