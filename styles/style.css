@@ -35,6 +35,7 @@ h1, h2, h3, h4, h5, h6, p {
   max-height: 756px;
   /* выше установили ограничения для секции */
   display: flex;
+  background-color: var(--color_light-grey);
 }
 
 .header_space-bottom {
@@ -46,7 +47,7 @@ h1, h2, h3, h4, h5, h6, p {
   align-self: center;
   width: 730px;
   left: 64px;
-  z-index: 1;
+  z-index: 2;
   line-height: 96px;
   font-size: 102px;
   font-weight: 600;
@@ -57,7 +58,7 @@ h1, h2, h3, h4, h5, h6, p {
   bottom: 30px;
   left: 64px;
   width: 388px;
-  z-index: 1;
+  z-index: 2;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
@@ -74,6 +75,7 @@ h1, h2, h3, h4, h5, h6, p {
   height: 608px;
   right: 0;
   bottom: 0;
+  z-index: 1;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -83,7 +85,7 @@ h1, h2, h3, h4, h5, h6, p {
   width: 568px;
   top: 64px;
   right: 0;
-  z-index: -1;
+  z-index: 0;
   background-color: var(--color_blue);
 }
 
@@ -239,6 +241,7 @@ h1, h2, h3, h4, h5, h6, p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--color_light-grey);
 }
 
 .feynman__title {
@@ -284,7 +287,71 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .footer {
-
+  background-color: var(--color_black);
+  color: white;
+  min-height: 350px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
 }
 
+.footer__columns {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__column_content_copyright {
+  flex-basis: 711px;
+  justify-content: space-between;
+}
+
+.footer__author {
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.footer__author_space-around {
+  margin: 18px 0;
+}
+
+.footer__column_content_info {
+  row-gap: 20px;
+}
+
+.footer__column_content_social {
+  row-gap: 20px;
+}
+
+.footer__column_heading {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.footer__column-links {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__column-link {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  column-gap: 10px;
+}
 
