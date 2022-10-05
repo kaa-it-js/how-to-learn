@@ -13,10 +13,6 @@ h1, h2, h3, h4, h5, h6, p {
   border: 1px solid red;
 }
 
-.section_space-around {
-  margin: 100px auto;
-}
-
 .centered-block {
   margin: auto;
 }
@@ -39,6 +35,10 @@ h1, h2, h3, h4, h5, h6, p {
   max-height: 756px;
   /* выше установили ограничения для секции */
   display: flex;
+}
+
+.header_space-bottom {
+  margin-bottom: 100px;
 }
 
 .header__title {
@@ -109,6 +109,10 @@ h1, h2, h3, h4, h5, h6, p {
   justify-content: center;
 }
 
+.description_space-bottom {
+  margin-bottom: 100px;
+}
+
 .two-columns {
   width: 80%;
   display: flex;
@@ -148,6 +152,10 @@ h1, h2, h3, h4, h5, h6, p {
 
 }
 
+.digits_space-bottom {
+  margin-bottom: 100px;
+}
+
 .section-title {
   width: 60%;
   line-height: 1.15;
@@ -160,6 +168,10 @@ h1, h2, h3, h4, h5, h6, p {
   margin-bottom: 20px;
 }
 
+.section-title_theme_dark {
+  color: white;
+}
+
 .section-subtitle {
   width: 60%;
   line-height: 34px;
@@ -168,12 +180,16 @@ h1, h2, h3, h4, h5, h6, p {
   text-align: center;
 }
 
+.section-subtitle_theme_dark {
+  color: white;
+}
+
 .table {
   width: 1100px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  row-gap: 60px;
+  position: relative;
 }
 
 .table_space-top {
@@ -182,7 +198,17 @@ h1, h2, h3, h4, h5, h6, p {
 
 .table__cell {
   width: 250px;
+  margin-top: 60px;
 }
+
+/* и элемента с модификатором вида ключ-значение */
+.table__cell_theme_dark {
+  width: 200px;
+  color: white;
+  margin-right: 0;
+  margin-top: 80px;
+}
+
 
 .table__heading {
   line-height: 1.15;
@@ -202,14 +228,6 @@ h1, h2, h3, h4, h5, h6, p {
 
 .table__text_space-bottom {
   margin-bottom: 20px;
-}
-
-/* и элемента с модификатором вида ключ-значение */
-.table__cell_theme_dark {
-  width: 200px;
-  color: white;
-  margin-right: 0;
-  margin-top: 80px;
 }
 
 .feynman {
@@ -252,7 +270,17 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .kaufman {
+  background-color: var(--color_black);
+  padding: 90px 0;
+  overflow: hidden;
+  position: relative;
+}
 
+.kaufman__illustration {
+  position: absolute;
+  top: 0;
+  right: -210px;
+  z-index: 0;
 }
 
 .footer {
