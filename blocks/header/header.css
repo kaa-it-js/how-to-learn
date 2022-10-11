@@ -6,4 +6,5 @@
   /* выше установили ограничения для секции */
   display: flex;
   background-color: var(--color_light-grey);
+  overflow: hidden;
 }
