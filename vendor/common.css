@@ -1,0 +1,10 @@
+:root {
+  --color_black: #000000;
+  --color_dark-grey: #1f1f1f;
+  --color_light-grey: #f2f2f2;
+  --color_blue: #2f80ed;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
