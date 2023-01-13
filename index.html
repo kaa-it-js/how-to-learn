@@ -17,14 +17,17 @@
       Какие современные и эффективные подходы к обучению вы
       можете использовать в своей жизни?
       <a href="#" class="link header__link">Узнать &rarr;</a>
+      <!-- link по брифу является элементом и не выделяется в отдельный блок. Не знаю насколько это важно. Я бы тоже сделал блоком. -->
     </p>
     <div class="header__square-pic header__square-pic-rotation"></div>
+    <!-- Для анимации должен быть создан отдельный блок https://skr.sh/sHsVboYjvDG так как он переиспользуется в проекте -->
     <img class="header__main-illustration" src="./images/header-image.png" alt="Рисунок заголовка">
   </header>
   <main class="content">
     <section class="description">
       <div class="two-columns">
         <a class="link two-columns__brief" href="#">Главные проблемы в обучении</a>
+        <!-- Не является ссылкой. Используйте тег <p> -->
         <div class="two-columns__main-text">
           <p class="two-columns__paragraph">
             Ни в школе, ни в институте нас не учат тому, как правильно изучать материал.
@@ -33,6 +36,7 @@
           </p>
           <p class="two-columns__paragraph">
             <span class="two_columns__span-accent">Вывод:</span>
+            <!-- Некорректное название класса two-columns должны разделяться тире, а не подчерком -->
             учиться тоже нужно уметь, но почему-то этому мало где учат. Что с этим делать?
           </p>
           <p class="two-columns__paragraph">
@@ -46,11 +50,14 @@
       <h2 class="section-title techniques__section-title">Техники обучения</h2>
       <h4 class="section-subtitle techniques__section-subtitle">Пять техник от Барбары Оакли</h4>
       <div class="table techniques__table">
+        <!--  https://skr.sh/sHs9FxwHg8d здесь должен быть блок cards и он достаточно самостоятельный, ему не нужны миксы -->
         <article class="table__cell techniques__table-cell">
           <img class="techniques__table-image" src="./images/cards-attention.png" alt="Два вида внимания">
+          <!-- Нессответствие в используемых элементах. В блоке table должны быть элементы table иначе он перестает быть самостоятельным, а здесь элемент другого блока, это если не замечать что здесь вообще должно быть cards -->
           <h3 class="table__heading">Два вида внимания</h3>
           <p class="table__text techniques__table-text">Глубокие знания возникают, если чередовать сфокусированное и
             рассеянное мышление.</p>
+            <!-- Заметь, что у тебя внутри блока тэйбл не должно быть подмешано элементов родительского блока. ты можешь микс сделать в самом начале, там где встраивается сам блок, для его выравнивания на странице, но внутри блока должны быть тольео эклементы блока, внутрь блока уже не миксуются элементы других блоков  -->
         </article>
         <article class="table__cell techniques__table-cell">
           <img class="techniques__table-image" src="./images/cards-recall.png" alt="Recall">
@@ -59,6 +66,7 @@
             порции памяти.</p>
         </article>
         <article class="table__cell techniques__table-cell">
+          <!-- В данном случае необходимо использовать список <ul> <li> так как речь идет о повторяющихся элементах и в другой секции таблица может содержать не 5 а 3 или 8 карточек -->
           <img class="techniques__table-image" src="./images/cards-interliving.png" alt="Интерливинг">
           <h3 class="table__heading">Интерливинг</h3>
           <p class="table__text techniques__table-text">Изучайте несколько навыков одновременно, они обогащают друг
@@ -90,11 +98,13 @@
                 title="The first 20 hours -- how to learn anything | Josh Kaufman | TEDxCSU" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen></iframe>
+                <!-- Размеры из атрибутов width и height нужно перенести в CSS. По БЭМ не рекомендуется управлять размерами через атрибуты. Так-же и настройки рамки. -->
       </div>
     </section>
     <section class="oakley">
       <div class="two-columns">
         <a class="link two-columns__brief" href="#">История Барбары Оакли.</a>
+        <!-- Не является ссылкой -->
         <div class="two-columns__main-text">
           <p class="two-columns__paragraph">
             НС детства Барбаре не давалась математика. Она считала себя законченным гуманитарием, причём далеко не самым
@@ -113,12 +123,14 @@
       <h1 class="feynman__title">Метод Фейнмана</h1>
       <h3 class="feynman__subtitle">Выучить и не забыть</h3>
       <a class="link feynman__link">Подробнее &rarr;</a>
+      <!-- Каждому тегу <a> следует устанавливать атрибут href -->
     </section>
     <section class="digits">
       <h2 class="section-title digits__section-title">Цифры и факты</h2>
       <h4 class="section-subtitle digits__section-subtitle">Про учебу и мозг</h4>
       <div class="table digits__table">
         <article class="table__cell">
+          <!-- Вот здесь уже реально table. Обрати внимание, что содержимое тоже явный список -->
           <h3 class="table__heading">86 миллиардов</h3>
           <p class="table__text">Число нейронов в мозге человека</p>
         </article>
@@ -177,6 +189,7 @@
       <div class="kaufman__illustration kaufman__illustration-rotation"></div>
       <div class="table kaufman__table">
         <article class="table__cell table__cell_theme_dark">
+          <!-- Здесь так-же явно должен использоваться список -->
           <h3 class="table__heading">1</h3>
           <p class="table__text">Выберите привлекательный объект.</p>
         </article>
@@ -222,6 +235,7 @@
       <h2 class="section-title resources__section-title">Полезные ресурсы</h2>
       <h4 class="section-subtitle resources__section-subtitle">Больше материалов о техниках и лайфхаках обучения</h4>
       <div class="resources__logo-zone">
+        <!-- В данном случае правильнее использовать не div, а <ul>, так как ниже перечисление полезных ресурсов. -->
         <a class="link resources__link" href="#">
           <img class="resources__logo" src="./images/logo/resources-arzamas.svg" alt="Arzamas">
         </a>
@@ -245,7 +259,10 @@
       </div>
       <div class="footer__column footer__column_content_info">
         <h3 class="footer__column_heading">О Практикуме</h3>
+        <!-- Использование модификатора без самого класса элемента недопустимо.  Обрати внимание, что здесь должен быть элемент, а не модификатор-->
+        <!-- "О практикуме" не является заголовком. Смотри, у тебя в секции нет заголовка 2 уровня, получается 3 уровень без второго, так не должно быть. надо офрмить обычным <p> -->
         <div class="footer__column-links">
+          <!-- Данный блок нужно офрмить как <nav> так как данное меню предполагается как навигация по приложению, просто пока все ссылки пустые -->
           <a class="link footer__column-link" href="#">Главная</a>
           <a class="link footer__column-link" href="#">Концепция</a>
           <a class="link footer__column-link" href="#">Наставники</a>
@@ -253,7 +270,9 @@
       </div>
       <div class="footer__column footer__column_content_social">
         <h3 class="footer__column_heading">Соцсети</h3>
+        <!-- Использование модификатора без самого класса элемента недопустимо.  -->
         <div class="footer__column-links">
+          <!-- Дальше нужно оформить список соцсетей, т.е. обернуть все в <ul> -->
           <a class="link footer__column-link" href="#">
             <img class="footer__social-icon" src="./images/youtube-icon.svg" alt="Youtube Icon">
             YouTube
