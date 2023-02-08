@@ -1,0 +1,7 @@
+.oakley {
+  margin-top: -40px;
+  padding-top: 160px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color_light-grey);
+}
